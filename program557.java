@@ -1,0 +1,57 @@
+import java.util.*;
+
+class Number
+{
+    public int Arr[];
+
+    public void Accept(int isize)
+    {
+        Arr=new int[isize];
+
+        Scanner sobj = new Scanner(System.in);
+
+        System.out.println("Enter the elements : ");
+        for(int iCnt = 0; iCnt < Arr.length;iCnt++)
+        {
+            Arr[iCnt] = sobj.nextInt();
+        }
+    }
+
+ int FirstOcc(int NO)
+ {
+     for(int iCnt = 0; iCnt < Arr.length;iCnt++)
+        {
+            if(Arr[iCnt]==NO)
+            {
+                return iCnt;
+            }
+           
+        } 
+        return (-1);       
+ }
+}
+class program557
+{
+    public static void main(String Arg[])
+    {
+        Scanner sobj = new Scanner(System.in);
+
+        
+        System.out.println("Enter number of elements : ");
+        int isize = sobj.nextInt();
+
+        System.out.println("Enter number that want to find : ");
+        int iNO = sobj.nextInt();
+
+
+        Number aobj = new Number();
+        aobj.Accept(isize);
+        int iret=aobj.FirstOcc(iNO);
+         
+        
+System.out.println("index of first occurance"+iret);
+         
+    }
+
+
+}
